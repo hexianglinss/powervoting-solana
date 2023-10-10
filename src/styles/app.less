@@ -1,0 +1,68 @@
+.layout {
+  position: relative;
+  color: #7F8FA3;
+  height: 100vh;
+  overflow-y: scroll;
+  &::-webkit-scrollbar,
+  &::-webkit-scrollbar {
+    width: 10px;
+    /* 滚动条宽度 */
+    height: 10px;
+    /* 滚动条高度 */
+  }
+
+  /* 修改滚动条拖动块样式 */
+  &::-webkit-scrollbar-thumb {
+    background-color: #5d5c5c;
+    /* 拖动块颜色 */
+    border-radius: 5px;
+    /* 拖动块圆角 */
+  }
+
+
+  /* 修改滚动条背景样式 */
+  &::-webkit-scrollbar-track {
+    background-color: #454343;
+    /* 背景颜色 */
+  }
+  header {
+    padding: 0 2rem;
+    .logo {
+      height: 64px;
+    }
+    .lang {
+      display: flex;
+
+      .ant-select-selector {
+        padding: 0 !important;
+        .ant-select-selection-item {
+          color: #ffffff;
+        }
+      }
+
+      .ant-select-arrow {
+        right: -2px;
+      }
+
+      .ant-select-selection-item {
+        font-weight: 500;
+      }
+    }
+  }
+  .content {
+    flex: 1;
+    min-height: calc(100vh - 231px);
+    .voting, .voting-result, .voteList {
+      .border, .border-skin-border, .border-md, .border-lg, .border-b, .border-t, .border-r, .border-l {
+        border-color: #313D4F;
+        border-style: solid;
+      }
+    }
+  }
+  #back-to-top {
+    display: none ;
+    transform: scale(0.95);
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  }
+
+}
